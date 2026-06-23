@@ -40,8 +40,8 @@ tailwind.config = {
   /* гоночная полоса ливреи Scania */
   .livery{background:linear-gradient(90deg,#D7322B 0 28%,#F2A20C 28% 64%,#FFD23F 64% 100%)}
   .livery-v{background:linear-gradient(180deg,#D7322B 0 28%,#F2A20C 28% 64%,#FFD23F 64% 100%)}
-  .hero-scrim{background:linear-gradient(180deg,rgba(8,14,22,.55) 0%,rgba(8,14,22,.10) 24%,rgba(8,14,22,.18) 50%,rgba(8,14,22,.82) 86%,rgba(8,14,22,.96) 100%)}
-  .hero-side{background:linear-gradient(90deg,rgba(8,14,22,.78) 0%,rgba(8,14,22,.30) 40%,transparent 70%)}
+  .hero-scrim{background:linear-gradient(180deg,rgba(8,14,22,.30) 0%,transparent 34%,rgba(8,14,22,.55) 64%,rgba(8,14,22,.96) 100%)}
+  .hero-side{background:linear-gradient(90deg,rgba(8,14,22,.94) 0%,rgba(8,14,22,.72) 26%,rgba(8,14,22,.30) 48%,rgba(8,14,22,0) 66%)}
   .grain{background-image:radial-gradient(rgba(255,255,255,.025) 1px,transparent 1px);background-size:3px 3px}
   .card-line{position:relative}
   .card-line::before{content:"";position:absolute;left:0;top:0;height:100%;width:3px;background:linear-gradient(180deg,#1657B0,#0E3F75)}
@@ -106,21 +106,22 @@ tailwind.config = {
 
 <!-- ============ HERO ============ -->
 <section id="start" class="relative">
-  <div class="relative min-h-[calc(100svh-5rem)] flex flex-col justify-end overflow-hidden">
-    <img src="img/hero.jpg" alt="Blauer Scania 143M der ST Saxer Transport AG auf der Landstrasse bei Dietikon" class="absolute inset-0 w-full h-full object-cover object-[42%_45%]">
-    <div class="absolute inset-0 hero-scrim"></div>
-    <div class="absolute inset-0 hero-side"></div>
+  <div class="relative min-h-[calc(100svh-5rem)] flex flex-col justify-end lg:justify-center overflow-hidden">
+    <img src="img/hero.jpg" alt="Blauer Scania 143M der ST Saxer Transport AG auf der Landstrasse bei Dietikon" class="absolute inset-0 w-full h-full object-cover object-[66%_58%] lg:object-[58%_center]">
+    <div class="absolute inset-0 hero-scrim lg:hidden"></div>
+    <div class="absolute inset-0 hero-side hidden lg:block"></div>
     <div class="absolute inset-0 grain opacity-60"></div>
 
-    <div class="relative max-w-7xl mx-auto w-full px-5 lg:px-8 pb-12 lg:pb-16 pt-28">
+    <div class="relative max-w-7xl mx-auto w-full px-5 lg:px-8 pb-12 lg:pb-0 pt-28 lg:pt-0">
+     <div class="max-w-[34rem]">
       <div class="flex items-center gap-3 mb-5 reveal">
         <span class="block w-10 h-[6px] livery rounded-[2px] shrink-0"></span>
         <span class="eyebrow text-[.58rem] sm:text-[.72rem] tracking-[.18em] sm:tracking-[.28em] text-steel">Dietiker Transporttradition seit 1858</span>
       </div>
-      <h1 class="display text-white font-800 text-[clamp(2.2rem,8vw,5.6rem)] max-w-4xl reveal">
-        Kipper-&nbsp;&amp;<br class="sm:hidden">&nbsp;Beton&shy;transporte<br><span class="text-saxer-400">aus Dietikon.</span>
+      <h1 class="display text-white font-800 text-[clamp(2.2rem,5vw,3.9rem)] reveal">
+        Kipper-&nbsp;&amp;<br>Betontransporte<br><span class="text-saxer-400">aus Dietikon.</span>
       </h1>
-      <p class="mt-6 max-w-xl text-base lg:text-lg text-steel/90 leading-relaxed reveal">
+      <p class="mt-6 text-base lg:text-lg text-steel/90 leading-relaxed reveal">
         Die blauen Lastwagen aus dem Limmattal. Schwere Transporte von Schüttgut und Beton –
         seit Generationen zuverlässig unterwegs, mit einer modernen Scania-Flotte nach Euro&nbsp;6d.
       </p>
@@ -133,6 +134,7 @@ tailwind.config = {
           Unsere Flotte
         </a>
       </div>
+     </div>
     </div>
   </div>
 </section>
